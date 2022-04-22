@@ -1,0 +1,32 @@
+body {
+    font: 20px Arial,sans-serif;
+}
+
+.navbar {
+    background-color: #39a839;
+}
+
+.margin {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.quem-somos {
+    background-color: #8181F7;
+    color: white;
+}
+
+.parceiros {
+    background-color: #34398a;
+    color: white;
+}
+
+.servicos {
+    background-color: orange;
+    color: white;
+}
+
+.bg-footer {
+    background-color: black;
+    color: white;
+}

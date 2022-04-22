@@ -1,0 +1,8 @@
+function removeDuplicates(array){
+    let unique = new Set(array);
+    return [...unique];
+}
+
+let numbers = [30, 30, 40, 5, 223, 2049, 3034, 5];
+
+console.log(removeDuplicates(numbers));

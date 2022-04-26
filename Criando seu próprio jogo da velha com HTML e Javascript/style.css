@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+.row {
+    font-size: 0
+}
+
+.quadrado {
+    text-align: center;
+    width: 50px;
+    background: #383838;
+    display: inline-block;
+    padding: 40px;
+    font-size: 60px;
+    border: 5px solid Gray;
+    cursor: pointer;
+    color: #383838;
+}
+
+.jogador, .vencedor {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.selecionado {
+    color: white;
+}
+
+.quadrado-vencedor {
+    background: green;
+}
+
+.velha {
+    background: #A80000;
+}

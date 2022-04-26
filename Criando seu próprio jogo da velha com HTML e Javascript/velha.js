@@ -26,25 +26,34 @@ function mudarJogador(valor) {
 }
 
 function checaVencedor() {
-    let quadradosTestados = []
+    let sequenciasATestar = criarListaDeSequencias()
+
+    sequenciasATestar.forEach((sequencia) => {
+        if(checaSequencia(...sequencia)){
+            mudaCorQuadrado(sequencia)
+            return
+        }
+    })
+}
+
+function criarListaDeSequencias() {
+    let sequenciasATestar = []
+
     //Linhas verticais
     for(let i = 0; i <= 2; i++){
-        quadradosTestados = [quadrados[i], quadrados[i+3], quadrados[i+6]]
-        if (checaSequencia(...quadradosTestados)) mudaCorQuadrado(quadradosTestados)
+        sequenciasATestar.push([quadrados[i], quadrados[i+3], quadrados[i+6]])
     }
 
     //Linhas horizontais
     for(let i = 0; i <= 6; i += 3){
-        quadradosTestados = [quadrados[i], quadrados[i+1], quadrados[i+2]]
-        if (checaSequencia(...quadradosTestados)) mudaCorQuadrado(quadradosTestados)
+        sequenciasATestar.push([quadrados[i], quadrados[i+1], quadrados[i+2]])
     }
 
     //Diagonais
-    quadradosTestados = [quadrados[0], quadrados[4], quadrados[8]]
-    if (checaSequencia(...quadradosTestados)) mudaCorQuadrado(quadradosTestados)
+    sequenciasATestar.push([quadrados[0], quadrados[4], quadrados[8]])
+    sequenciasATestar.push([quadrados[2], quadrados[4], quadrados[6]])
 
-    quadradosTestados = [quadrados[2], quadrados[4], quadrados[6]]
-    if (checaSequencia(...quadradosTestados)) mudaCorQuadrado(quadradosTestados)
+    return sequenciasATestar
 }
 
 function checaSequencia(quadrado1, quadrado2, quadrado3){

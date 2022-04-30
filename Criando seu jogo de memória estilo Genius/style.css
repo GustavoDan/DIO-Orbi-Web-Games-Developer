@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    background: rgb(208, 255, 239);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-area {
+    height: 90vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #e7ceff;
+    border: 10px solid #a253af;
+    border-radius: 50px;
+}
+
+#game-area {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-font{
+    margin: 0;
+    font-family: 'Tapestry', cursive;
+    font-size: 1.5vw;
+    color: #0207ac;
+}
+
+#genesis {
+    font-size: 5vw;
+    color: #992f82;
+    /* Unselectable text */
+    user-select: none; /* Standard */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    -webkit-user-select: none; /* Safari */
+}
+
+button {
+    border-radius: 50px;
+    padding: 1.5vh 1.7vw;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.35s;
+}
+
+#start-game {
+    background: #008CBA;
+    color: #b6dfec;
+    border: 3px solid #008CBA;
+    font-size: 5vw;
+}
+
+#start-game:hover {
+    background: #b6dfec;
+    color: #008CBA;
+    border: 3px solid #008CBA;
+}
+
+#info-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #bbf9ff;
+    border: 5px solid #a253af;
+}
+
+#score {
+    margin-right: 1.5vw;
+    margin-left: auto;
+}
+
+#level {
+    margin-left: 1.5vw;
+}
+
+#genius {
+    display: grid;
+    grid-template-areas: 'green-area red-area'
+                         'yellow-area blue-area';
+    grid-gap: 3px;
+    background: black;
+    border: 10px solid black;
+    border-radius: 100%;
+    width: 34vw;
+    height: 34vw;
+}
+
+#green {
+    grid-area: green-area;
+    background: green;
+    border: 3px solid white;
+    border-top-left-radius: 100%;
+}
+
+#red {
+    grid-area: red-area;
+    background: red;
+    border: 3px solid white;
+    border-top-right-radius: 100%;
+}
+
+#yellow {
+    grid-area: yellow-area;
+    background: yellow;
+    border: 3px solid white;
+    border-bottom-left-radius: 100%;
+}
+
+#blue {
+    grid-area: blue-area;
+    background: blue;
+    border: 3px solid white;
+    border-bottom-right-radius: 100%;
+}
+
+.selected {
+    opacity: 0.4;
+}
+
+.modal {
+    position: fixed;
+    z-index: 200;
+    background: #e7ceff;
+    border: 10px solid #a253af;
+    border-radius: 50px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.backdrop {
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#modal-title {
+    width: 100%;
+    background: #ffb5b5;
+    border-bottom: 10px solid #a253af;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    color: red;
+    font-size: 4vw;
+}
+
+#modal-text {
+    margin: 1vw 3vw 2vw;
+    font-size: 3vw;
+}
+
+#close-modal {
+    background: green;
+    color: lightgreen;
+    border: 3px solid green;
+    font-size: 2vw;
+    margin-bottom: 1vh;
+}
+
+#close-modal:hover {
+    background: lightgreen;
+    color: green;
+    border: 3px solid green;
+}
+
+
+@media (max-width: 800px){
+    #main-area {
+        height: 50vh;
+        width: 90vw;
+    }
+
+    #genius {
+        width: 70vw;
+        height: 70vw;
+    }
+}

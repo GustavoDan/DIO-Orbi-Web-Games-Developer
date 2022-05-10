@@ -5,19 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="icon" href="favicon.png">
         <link rel="stylesheet" href="style.css">
 
         <title>Resgate</title>
     </head>
 
     <body>
-        <div id="container">
-            <div id="game-background">
+        <div id="game-background">
+            <div id="game-panel">
+                <p id="title" class="game-font">Resgate</p>
+
                 <div id="game-info">
-                    <h1>Resgate</h1>
-                    <p>Utilize a tecla W para movimentar o helicóptero para cima, a tecla S para movimentar o helicóptero para baixo e a tecla D para atirar.</p>
-                    <button id="play-button">Clique aqui para iniciar!!</button>
+                    <p id="subtitle" class="game-font">Controles:</p>
+                    <p class="game-font">WASD ou Setas = Movimentar</p>
+                    <p class="game-font">Espaco = Atirar</p>
                 </div>
+
+                <button id="play-button" class="game-font">Iniciar o jogo</button>    
             </div>
         </div>
 
@@ -26,7 +31,7 @@
         <audio src="sounds/explosion.mp3" preload="auto" id="explosion-sound"></audio>
         <audio src="sounds/saved.mp3" preload="auto" id="saved-sound"></audio>
         <audio src="sounds/dead.mp3" preload="auto" id="dead-sound"></audio>	
-        <audio src="sounds/game_over.mp3" preload="auto" id="game-over-sound"></audio>
+        <audio src="sounds/game_over.mp3" preload="auto" id="game-over-music"></audio>
 
         <script type="text/javascript" src="game.js"></script> 
     </body>

@@ -1,153 +1,154 @@
 @font-face {
-	font-family:Titulo;
-	src:url(fonts/ANODETONOONE.TTF);
+	font-family: Titulo;
+	src: url(fonts/ANODETONOONE.TTF);
 }
 
 body {
-	background-image:url(imgs/background.jpg);
-}
+	width: 100vw;
+    height: 100vh;
 
-h1 {
-	font-family:Titulo;
-	font-size:40px;
-	color:#603A03;
-	user-select: none;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-h2 {
-	font-family:Titulo;
-	font-size:20px;
-	color:#FFF;
-	user-select: none;
-}
-
-h3, #play-again {
-	font-family:Titulo;
-	font-size:20px;
-	color:#603A03;
-	user-select: none;
-}
-
-p {
-	user-select: none;
-}
-
-
-#container{
-	width:950px;
-	height:auto;
-
-	position:relative;
-
-	margin-left:auto;
-	margin-right:auto;
+	background: url(imgs/background.png);
+	margin: 0;
 }
 
 #game-background {
-	width:950px;
-	height:630px;
+	width: 90vw;
+	height: 630px;
 
-	background-image:url(imgs/game_background.jpg);
-	border-color:#FFF;
-	border-style:solid;
+	position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+	background: url(imgs/game_background.png);
+	border: 3px solid white;
+	border-radius: 10px;
+}
+
+#game-panel {
+	background: #80cb83;
+	text-align: center;
+	padding: 20px;
+	border: 5px solid green;
+	border-radius: 10px;
+}
+
+.game-font {
+	font-family: Titulo;
+	font-size: 2.5vh;
+	user-select: none;
+	margin: 0;
+}
+
+#title {
+	font-size: 5vh;
+	color: #603A03;
+	margin: 0;
+	margin-bottom: 20px;
 }
 
 #game-info {
-	width:350px;
-	height:200px;
+	margin-bottom: 20px;
+}
 
-	background-color:#FFF;
-	padding:10px;
- 	margin-left:auto;
-	margin-right:auto;
- 	margin-top:100px;
-	text-align:center;
+#subtitle {
+	font-size: 3vh;
+	margin-bottom: 10px;
+}
+
+#play-button {
+    background: #603a03;
+	font-size: 2.5vh;
+    color: #bda37e;
+	text-align: center;
+    padding: 1.3vh 1.3vw;
+    border: 3px solid #603a03;
+    border-radius: 50px;
+    cursor: pointer;
+    transition-duration: 0.35s;
+}
+
+#play-button:hover {
+    background: #bda37e;
+    color: #603a03;
+    border: 3px solid #603a03;
 }
 
 #player {
-	width:256px;
-	height:66px;
-
-	position:absolute;
-	left:8px;
-	top:179px;
-
-	background-image:url(imgs/apache.png);
-
-	animation: anim .5s steps(2) infinite;
-}
-
-#enemy1 {
 	width: 256px;
 	height: 66px;
 
 	position: absolute;
-	left: 689px;
-	top: 253px;
 
-	background-image:url(imgs/enemy1.png);
+	background-image: url(imgs/player.png);
 
-	animation: anim .5s steps(2) infinite;
+	animation: player .5s steps(2) infinite;
 }
 
-#enemy2 {
-	width: 165px;
+#enemy-helicopter {
+	width: 246px;
+	height: 65px;
+
+	position: absolute;
+
+	background-image: url(imgs/enemy_helicopter.png);
+
+	animation: enemy-helicopter .5s steps(2) infinite;
+}
+
+#enemy-truck {
+	width: 154px;
 	height: 70px;
 
 	position: absolute;
-	left: 775px;
-	top: 447px;
 
-	background-image: url(imgs/enemy2.png);
+	background-image: url(imgs/enemy_truck.png);
 }
 
 #ally {
-	width: 44px;
-	height: 51px;
+	width: 34px;
+	height: 40px;
 
 	position: absolute;
-	left: 10px;
-	top: 464px;
 
-	background-image:url(imgs/ally.png);
+	background-image: url(imgs/ally.png);
 
 	animation: ally .9s steps(12) infinite;
 }
 
 #score {
-	width: 450px;
-	height: 50px;
-
 	position: absolute;
-	left: 5px;
-	top: 590px;
+	left: 1vw;
+	bottom: 1vh;
+
+	color: white;
 }
 
 #life {
-	width: 140px;
+	width: 141px;
 	height: 38px;
 
 	position: absolute;
-	left: 750px;
-	top: 7px;
-
-	background-image: url(imgs/lifeBar.png)
+	left: 1vw;
+	top: 1vh;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	gap: 10px;
+	
+	background-image: url(imgs/lifeBar.png);
+	opacity: 0.5;
 }
 
 #battery {
 	width: 35px;
 	height: 25px;
 
-	display: inline-block;
-
-	margin-top: 6px;
-	margin-left: 10px;
-
 	background-image: url(imgs/battery.png);
-}
-
-#battery:first-child {
-	margin-left: 7px;
 }
 
 #bullet {
@@ -159,60 +160,52 @@ p {
 	background-image: url(imgs/bullet.png);
 }
 
-#explosion1 {
-	width:15px;
-	height:87px;
+#deathAnimation1 {
+	width: 15px;
+	height: 86px;
 
-	position:absolute;
+	position: absolute;
 
 	background-image: url(imgs/explosion.png);
 
 	animation: explosion .7s linear;
 }
 
-#explosion2 {
-	width:15px;
-	height:87px;
+#deathAnimation2 {
+	width: 15px;
+	height: 86px;
 
-	position:absolute;
+	position: absolute;
 
 	background-image: url(imgs/explosion.png);
 
 	animation: explosion 1s linear;
 }
 
-#explosion3 {
-	width:44px;
-	height:51px;
+#deathAnimation3 {
+	width: 44px;
+	height: 51px;
 
-	position:absolute;
+	position: absolute;
 
-	background-image:url(imgs/ally_death.png);
+	background-image: url(imgs/ally_death.png);
 
 	animation: ally-death .5s steps(7) infinite;
 }
 
-#game-over {
-	width:350px;
-	height:250px;
-
-	background-color:#FFF;
-	padding:10px;
-	margin-top:100px;
- 	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-}
-
-
-@keyframes anim {
+@keyframes player {
 	from {background-position:0px;}
 	to {background-position:-512px;}
 }
 
+@keyframes enemy-helicopter {
+	from {background-position:0px;}
+	to {background-position:-492px;}
+}
+
 @keyframes ally {
 	from {background-position:0px;}
-	to {background-position:-528px;}
+	to {background-position:-408px;}
 }
 
 @keyframes ally-death {

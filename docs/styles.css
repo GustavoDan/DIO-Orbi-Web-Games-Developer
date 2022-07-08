@@ -1,0 +1,51 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: lightskyblue;
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+}
+
+#main-area {
+    width: 30vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+
+    background-color: paleturquoise;
+    border: 6px solid darkblue;
+    border-radius: 25px;
+}
+
+#select-text {
+    justify-self: flex-start;
+    margin: 0;
+
+    color: DarkViolet;
+    font-weight: bold;
+
+    user-select: none;
+}
+
+button {
+    padding: 10px;
+    background-color: aquamarine;
+    border: 3px solid teal;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+
+    transition: 300ms;
+}
+
+button:hover {
+    transform: scale(1.3, 1.3);
+}

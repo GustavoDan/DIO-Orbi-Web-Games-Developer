@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     background: cornflowerblue;
     margin: 0;
     padding: 0;
@@ -37,7 +37,7 @@ body {
 }
 
 .title {
-    font-family: 'Righteous', cursive;
+    font-family: "Righteous", cursive;
     font-size: 5vh;
     color: #890d0d;
     user-select: none;
@@ -61,7 +61,7 @@ body {
 }
 
 .game-font {
-    font-family: 'Amatic SC', cursive;
+    font-family: "Amatic SC", cursive;
     font-size: 2.5vh;
     font-weight: bold;
     text-align: center;
@@ -95,7 +95,9 @@ body {
     left: 2%;
 
     background: url(img/hero.png);
-    background-size:cover; 
+    background-size: cover;
+
+    transition: 80ms;
 }
 
 #score {
@@ -108,10 +110,10 @@ body {
     font-size: 4vh;
     color: white;
     opacity: 50%;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
-#life-bar {    
+#life-bar {
     position: absolute;
     top: 0;
     left: 0;
@@ -154,7 +156,7 @@ body {
 
 .alien {
     height: 40px;
-	width: auto;
+    width: auto;
 
     position: absolute;
 }
@@ -171,21 +173,35 @@ body {
     animation: explosion 0.3s steps(8);
 }
 
-
 @keyframes laser {
-    0% {background-position: 0px;}
-    20% {background-position: -40px;}
-    85% {background-position: -80px;}
-    100% {background-position: -120px;}
+    0% {
+        background-position: 0px;
+    }
+    20% {
+        background-position: -40px;
+    }
+    85% {
+        background-position: -80px;
+    }
+    100% {
+        background-position: -120px;
+    }
 }
 
 @keyframes explosion {
-    from {background-position: 0px;}
-    to {background-position: -512px;}
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -512px;
+    }
 }
 
 @keyframes heart {
-    from {background-position: 0px;}
-    to {background-position: -4000px;}
-
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -4000px;
+    }
 }
